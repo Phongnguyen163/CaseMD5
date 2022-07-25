@@ -1,0 +1,68 @@
+<p>edit-house works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="form" (ngSubmit)="edit(id)"  >
+        <div class="text-left" >
+          <label>name</label>
+        </div>
+        <div class="font-group">
+          <input type="text" class="form-control" formControlName="name"
+                 placeholder="name" >
+        </div>
+        <div class="text-left">
+          <label>address</label>
+        </div>
+        <div class="font-group">
+          <input type="text" class="form-control" formControlName="address"
+                  placeholder="address" >
+        </div>
+        <div class="text-left">
+          <label>category</label>
+        </div>
+        <div class="font-group">
+         <select formControlName="category">
+           <option *ngFor="let category of listCategory" [value]="category.id" >{{category.name}}</option>
+         </select>
+        </div>
+        <div class="text-left">
+          <label>bedroom</label>
+        </div>
+        <div class="font-group">
+          <input type="text" class="form-control" formControlName="bedroom"
+                  placeholder="bedroom" >
+        </div>
+
+        <div class="text-left">
+          <label>bathroom</label>
+        </div>
+        <div class="font-group">
+          <input type="text" class="form-control" formControlName="bathroom"
+                 placeholder="bathroom" >
+        </div>
+        <div class="text-left">
+          <label>description</label>
+        </div>
+        <div class="font-group">
+          <input type="text" class="form-control" formControlName="description"
+                  placeholder="description" >
+        </div>
+        <div class="text-left">
+          <label>price</label>
+        </div>
+        <div class="font-group">
+          <input type="text" class="form-control" formControlName="price"
+                 placeholder="price" >
+        </div>
+        <div class="text-left">
+          <label>status</label>
+        </div>
+        <div class="font-group">
+          <input type="text" class="form-control" formControlName="status"
+                  placeholder="status" >
+        </div>
+        <button type="submit" class="btn btn-success">edit</button>
+      </form>
+    </div>
+  </div>
+</div>
