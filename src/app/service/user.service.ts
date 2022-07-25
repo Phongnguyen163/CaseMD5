@@ -14,4 +14,5 @@ export class UserService {
   showAllUser() :Observable<any> {
     return this.httpClient.get(API_URL)
   }
+
 }
