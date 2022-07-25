@@ -1,0 +1,35 @@
+<section class="home" id="home">
+  <form [formGroup]="form" (ngSubmit)="create()">
+    <h3> Create</h3>
+    <div class="inputBox">
+      <input type="text" name="" placeholder="name" formControlName = "name">
+    </div>
+    <div class="inputBox">
+      <input type="text" name="" placeholder="price" formControlName = "price">
+    </div>
+    <br>   <div class="inputBox">
+    <input type="text" name="" placeholder="description" formControlName = "description">
+  </div>
+    <br>   <div class="inputBox">
+    <input type="text" name="" placeholder="bedroom" formControlName = "bedroom">
+  </div>
+    <br>   <div class="inputBox">
+    <input type="text" name="" placeholder=" address" formControlName = "address">
+  </div>
+    <br>   <div class="inputBox">
+    <input type="text" name="" placeholder="bathroom" formControlName = "bathroom">
+  </div>
+    <br>   <div class="inputBox">
+    <input type="text" name="" placeholder="status" formControlName = "status">
+  </div>
+    <div>
+      <select formControlName="category">
+        <option *ngFor="let c of listCategory" [value]="c.id">{{c.name}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary"> Thêm</button>
+
+
+  </form>
+</section>

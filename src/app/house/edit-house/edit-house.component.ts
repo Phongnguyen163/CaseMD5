@@ -4,7 +4,7 @@ import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Category} from "../../model/category";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {House} from "../../model/house";
-import {User} from "../../model/user";
+
 
 @Component({
   selector: 'app-edit-house',
@@ -25,9 +25,6 @@ export class EditHouseComponent implements OnInit {
       // @ts-ignore
       this.id = +paraMap.get('id');
       this.getHouse(this.id)
-
-
-
     })
   }
   form: FormGroup = new FormGroup({
@@ -74,7 +71,6 @@ export class EditHouseComponent implements OnInit {
 
   getHouse(id:string){
     return this.houseService.getById(id).subscribe((data)=>{
-
       this.form = new FormGroup({
         name: new FormControl(data.name),
         price: new FormControl(data.price),
