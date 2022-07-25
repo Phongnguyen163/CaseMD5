@@ -20,7 +20,7 @@ export class HouseComponent implements OnInit {
 
   showAll() {
     this.houseServiceService.findAll().subscribe((houses) => {
-      this.houses = houses;
+      this.houses = houses.content;
       console.log('house', houses);
     }, error => {
       console.log(error);

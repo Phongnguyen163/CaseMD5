@@ -1,77 +1,216 @@
-<section class="featured portfolio bg-white-2 rec-pro full-l">
-  <div class="container-fluid">
-    <div class="sec-title">
-      <h2><span>Home In </span>The World </h2>
-      <p>Here are our featured homes</p>
+<app-navbar></app-navbar>
+
+<section class="home" id="home">
+  <form action="">
+    <h3>find your perfect home</h3>
+    <div class="buttons-container">
+      <a href="#" class="btn">for rent</a>
+      <a href="#" class="btn">for sell</a>
     </div>
-    <div class="row portfolio-items">
-      <div class="item col-xl-6 col-lg-12 col-md-12 col-xs-12 landscapes sale" *ngFor="let house of houses">
-        <div class="project-single" data-aos="fade-right">
-          <div class="project-inner project-head">
-            <div class="homes">
-              <!-- homes img -->
-              <a href="single-property-1.html" class="homes-img">
-                <div class="homes-tag button alt featured">Featured</div>
-                <div class="homes-tag button alt sale">For Sale</div>
-                <img src="assets/images/blog/b-11.jpg" alt="home-1" class="img-responsive">
-              </a>
-            </div>
-            <div class="button-effect">
-              <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-              <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-              <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-            </div>
-          </div>
-          <!-- homes content -->
-          <div class="homes-content">
-            <!-- homes address -->
-            <h3><a href="single-property-1.html">{{house.name}}</a></h3>
-            <p class="homes-address mb-3">
-              <a href="single-property-1.html">
-                <i class="fa fa-map-marker"></i><span>{{house.address}}</span>
-              </a>
-            </p>
-            <!-- homes List -->
-            <ul class="homes-list clearfix pb-3">
-              <li class="the-icons">
-                <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                <span>{{house.bedroom}} Bedrooms</span>
-              </li>
-              <li class="the-icons">
-                <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                <span>{{house.bathroom}} Bathrooms</span>
-              </li>
-              <li class="the-icons">
-                <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                <span>720 sq ft</span>
-              </li>
-              <li class="the-icons">
-                <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                <span>2 Garages</span>
-              </li>
-            </ul>
-            <div class="price-properties footer pt-3 pb-0">
-              <h3 class="title mt-3">
-                <a href="single-property-1.html">${{house.price}}</a>
-              </h3>
-              <div class="compare">
-                <a href="#" title="Compare">
-                  <i class="flaticon-compare"></i>
-                </a>
-                <a href="#" title="Share">
-                  <i class="flaticon-share"></i>
-                </a>
-                <a href="#" title="Favorites">
-                  <i class="flaticon-heart"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+    <div class="inputBox">
+      <input type="search" name="" placeholder="neighborhood" id="">
+      <input type="search" name="" placeholder="city" id="">
+      <select name="" id="">
+        <option value="" disabled hidden selected>minimum price</option>
+        <option value="$5000">$5000</option>
+        <option value="$10000">$10000</option>
+        <option value="$15000">$15000</option>
+        <option value="$20000">$20000</option>
+        <option value="$25000">$25000</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled hidden selected>maximum price</option>
+        <option value="$30000">$30000</option>
+        <option value="$35000">$35000</option>
+        <option value="$40000">$40000</option>
+        <option value="$45000">$45000</option>
+        <option value="$50000">$50000</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled hidden selected>property status</option>
+        <option value="Ready To Move">Ready To Move</option>
+        <option value="under construction">under construction</option>
+        <option value="furnished">furnished</option>
+        <option value="semi-furnished">semi-furnished</option>
+        <option value="unfurnished">unfurnished</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled hidden selected>property type</option>
+        <option value="flat">flat</option>
+        <option value="house">house</option>
+        <option value="shop">shop</option>
+        <option value="warehouse">warehouse</option>
+        <option value="land">land</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled hidden selected>BHK</option>
+        <option value="1 BHK">1 BHK</option>
+        <option value="2 BHK">2 BHK</option>
+        <option value="3 BHK">3 BHK</option>
+        <option value="4 BHK">4 BHK</option>
+        <option value="5 BHK">5 BHK</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled hidden selected>aminities</option>
+        <option value="parking space">parking space</option>
+        <option value="swimming pool">swimming pool</option>
+        <option value="playground">playground</option>
+        <option value="security">security</option>
+        <option value="all">all</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled hidden selected>bedrooms</option>
+        <option value="1 bedroom">1 bedroom</option>
+        <option value="2 bedroom">2 bedroom</option>
+        <option value="3 bedroom">3 bedroom</option>
+        <option value="4 bedroom">4 bedroom</option>
+        <option value="5 bedroom">5 bedroom</option>
+      </select>
+      <select name="" id="">
+        <option value="" disabled hidden selected>bathrooms</option>
+        <option value="1 bathroom">1 bathroom</option>
+        <option value="2 bathroom">2 bathroom</option>
+        <option value="3 bathroom">3 bedroom</option>
+        <option value="4 bathroom">4 bathroom</option>
+        <option value="5 bathroom">5 bathroom</option>
+      </select>
+    </div>
+
+    <input type="submit" value="search property" class="btn">
+
+  </form>
+
+</section>
+
+<section class="services" id="services">
+
+  <h1 class="heading"> 5 căn nhà <span>được thuê nhiều nhất</span> </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="assets/images/s-1.png" alt="">
+      <h3>buying home</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam distinctio ipsa ab cum error quas fuga ad? Perspiciatis, autem officiis?</p>
+      <a href="#" class="btn">learn more</a>
+    </div>
+
+    <div class="box">
+      <img src="assets/images/s-2.png" alt="">
+      <h3>renting home</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam distinctio ipsa ab cum error quas fuga ad? Perspiciatis, autem officiis?</p>
+      <a href="#" class="btn">learn more</a>
+    </div>
+
+    <div class="box">
+      <img src="assets/images/s-3.png" alt="">
+      <h3>selling home</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam distinctio ipsa ab cum error quas fuga ad? Perspiciatis, autem officiis?</p>
+      <a href="#" class="btn">learn more</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+  <h1 class="heading"> <span>Danh sách</span> nhà </h1>
+  <div class="box-container">
+    <div class="box" *ngFor="let house of houses">
+      <div class="image-container">
+        <img src="assets/images/img-1.jpg" alt="">
+        <div class="info">
+          <h3>Sẵn sàng</h3>
+        </div>
+      </div>
+      <div class="content">
+        <div class="price">
+          <h3>$ {{house.price}}</h3>
+        </div>
+        <div class="location">
+          <h3>{{house.name}}</h3>
+          <p>{{house.address}}</p>
+        </div>
+        <div class="details">
+          <h3> <i class="fas fa-bed"></i> {{house.bathroom}} phòng ngủ </h3>
+          <h3> <i class="fas fa-bath"></i> {{house.bathroom}} phòng tắm </h3>
+        </div>
+        <div class="buttons">
+          <a class="btn" routerLink="/house-detail/{{house.id}}">Xem chi tiết</a>
         </div>
       </div>
     </div>
-    <div class="bg-all">
-      <a href="properties-full-grid-1.html" class="btn btn-outline-light">View More</a>
+  </div>
+</section>
+
+<!-- featured section ends -->
+
+<!-- agents section starts  -->
+
+<section class="agents" id="agents">
+
+  <h1 class="heading"> professional <span>agents</span> </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <a href="#" class="fas fa-envelope"></a>
+      <a href="#" class="fas fa-phone"></a>
+      <img src="assets/images/pic-1.png" alt="">
+      <h3>john deo</h3>
+      <span>agent</span>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+
+    <div class="box">
+      <a href="#" class="fas fa-envelope"></a>
+      <a href="#" class="fas fa-phone"></a>
+      <img src="assets/images/pic-2.png" alt="">
+      <h3>john deo</h3>
+      <span>agent</span>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+
+    <div class="box">
+      <a href="#" class="fas fa-envelope"></a>
+      <a href="#" class="fas fa-phone"></a>
+      <img src="assets/images/pic-3.png" alt="">
+      <h3>john deo</h3>
+      <span>agent</span>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+
+    <div class="box">
+      <a href="#" class="fas fa-envelope"></a>
+      <a href="#" class="fas fa-phone"></a>
+      <img src="assets/images/pic-4.png" alt="">
+      <h3>john deo</h3>
+      <span>agent</span>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
     </div>
   </div>
 </section>
