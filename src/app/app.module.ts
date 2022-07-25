@@ -13,6 +13,8 @@ import {ListProductComponent} from './user/list-product/list-product.component';
 import {JwtInterceptor} from "./helper/jwt-interceptor";
 import {ErrorInterceptor} from "./helper/error-interceptor";
 import { NavbarComponent } from './navbar/navbar.component';
+import { HouseComponent } from './house/house.component';
+import { AddHouseComponent } from './add-house/add-house.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegisterComponent,
     HomePageComponent,
     ListProductComponent,
-    NavbarComponent
+    NavbarComponent,
+    HouseComponent,
+    AddHouseComponent
   ],
   imports: [
     BrowserModule,
