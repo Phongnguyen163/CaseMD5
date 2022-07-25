@@ -2,35 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>House</title>
+  <title>Loginjwt</title>
   <base href="/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- font awesome cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- custom css file link  -->
-
   <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 <body>
-  <app-root></app-root>
-  <script
-  >
+<app-root></app-root>
+<script>
 
-    let menu = document.querySelector('#menu-bars');
-    let navbar = document.querySelector('.navbar');
+  let menu = document.querySelector('#menu-bars');
+  let navbar = document.querySelector('.navbar');
 
-    menu.onclick = () =>{
-      navbar.classList.toggle('active');
-      menu.classList.toggle('fa-times');
-    }
+  menu.onclick = () =>{
+    navbar.classList.toggle('active');
+    menu.classList.toggle('fa-times');
+  }
 
-    window.onscroll = () =>{
-      navbar.classList.remove('active');
-      menu.classList.remove('fa-times');
-    }
+  window.onscroll = () =>{
+    navbar.classList.remove('active');
+    menu.classList.remove('fa-times');
+  }
 
-  </script>
+</script>
 </body>
 </html>
