@@ -1,0 +1,25 @@
+<app-home-page></app-home-page>
+  <form [formGroup]="form" (submit)="addd()">
+    <p>Name</p>
+    <input type="text" formControlName="name">
+    <p>Category</p>
+    <select formControlName="category">
+      <option *ngFor="let h of listCategory" [value]="h.id">{{h.name}}</option>
+    </select>
+    <p>Address</p>
+    <input type="text" formControlName="address">
+    <p>Bedroom</p>
+    <input type="text" formControlName="bedroom">
+    <p>Bathroom</p>
+    <input type="text" formControlName="bathroom">
+    <p>Description</p>
+    <input type="text" formControlName="description">
+    <p>Price</p>
+    <input type="text" formControlName="price">
+    <p>Status</p>
+    <input type="text" formControlName="status">
+    <button>tao</button>
+  </form>
+
+
+
